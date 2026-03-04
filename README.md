@@ -5,11 +5,7 @@ This repository contains the backend microservice responsible for handling, vali
 
 ## Overview
 
-The **Contact Request Processor** is a critical component of our customer acquisition pipeline. It receives lead data via a RESTful API, validates the input, and queues it for asynchronous processing by our CRM integration layer (simulated in this repo).
-
-### Key Features
-
--   **REST API**: Simple, versioned endpoints for submission.
+The **Contact Request Processor** is a critical component of our customer acquisition pipeline. It receives lead data via a RESTful API, validates the input, and queues it for asynchronoue, versioned endpoints for submission.
 -   **Validation**: Strict input validation to ensure data integrity.
 -   **Scalable Architecture**: Designed to be deployed as a stateless microservice.
 -   **Automated Deployment**: Integrated CI/CD pipeline using GitHub Actions.
