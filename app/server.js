@@ -9,6 +9,10 @@ app.get('/', (req, res) => {
   res.send('Acto pide contacto Service');
 });
 
+app.get('/health', (req, res) => {
+  res.status(200).json({ status: 'ok', timestamp: new Date().toISOString() });
+});
+
 app.post('/contact', (req, res) => {
   try {
     const result = contactService.processContact(req.body);
