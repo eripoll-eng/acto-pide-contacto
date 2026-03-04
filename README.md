@@ -1,4 +1,4 @@
-# Contact Request Processor (Acto pide contacto)
+# Contact Request Processor
 
 ![Build Status](https://github.com/esTse/acto-pide-contacto/actions/workflows/ci.yml/badge.svg)
 ![Deployment Status](https://github.com/esTse/acto-pide-contacto/actions/workflows/contacto.yml/badge.svg)
