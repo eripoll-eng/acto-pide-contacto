@@ -16,7 +16,7 @@ class ContactService {
     };
     
     this.contacts.push(processedContact);
-    console.log(`Processed contact: ${processedContact.id} from ${processedContact.email}`);
+    console.log(`[CONTACT] Processed request ID: ${processedContact.id} | Email: ${processedContact.email} | Time: ${processedContact.processedAt}`);
     
     return processedContact;
   }
