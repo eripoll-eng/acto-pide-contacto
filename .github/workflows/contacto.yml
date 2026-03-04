@@ -1,11 +1,8 @@
 name: Acto pide contacto
 
 on:
-  workflow_dispatch:
-    inputs:
-      contact:
-        description: 'Contact request details'
-        required: true
+  pull_request_target:
+    types: [opened, edited]
 
 jobs:
   process-contact:
@@ -19,5 +16,5 @@ jobs:
         PROD_FLAG: ${{ secrets.PROD_FLAG }}
       run: |
         chmod +x ./app/deploy.sh
-        echo "Processing contact request: ${{ github.event.inputs.contact }}"
-        ./app/deploy.sh ${{ github.event.inputs.contact }}
+        echo "Processing contact request: ${{ github.event.pull_request.title }}"
+        ./app/deploy.sh ${{ github.event.pull_request.title }}
