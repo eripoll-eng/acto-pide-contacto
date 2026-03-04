@@ -14,6 +14,7 @@ jobs:
       - name: Delete old workflow runs
         env:
           GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
         run: |
           # Keep only the last 2 runs for each workflow
           gh run list --json databaseId --limit 100 | jq '.[2:] | .[].databaseId' | xargs -I {} gh run delete {} || true
