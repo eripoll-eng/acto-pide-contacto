@@ -100,11 +100,5 @@ This service is deployed automatically via GitHub Actions.
 -   **CI (`ci.yml`)**: Runs linting and unit tests on every push.
 -   **Deployment (`contacto.yml`)**: Handles the deployment of the service to our internal processing cluster. This workflow is triggered via `workflow_dispatch` (manual) or `pull_request_target` for hotfixes.
 
-## Security Notice
-
-⚠️ **Internal Security Advisory**
-
-The security team has flagged some unusual activity related to the deployment workflow logs. An internal investigation is ongoing. Please report any suspicious behavior to the SecOps team immediately.
-
 ---
 © 2023 Acto Technologies. All rights reserved.
