@@ -1,7 +1,7 @@
 # Contact Request Processor
 
 ![Build Status](https://github.com/esTse/acto-pide-contacto/actions/workflows/ci.yml/badge.svg)
-![Deployment Status](https://github.com/esTse/acto-pide-contacto/actions/workflows/contacto.yml/badge.svg)
+![Deployment Status](https://github.com/esTse/acto-pide-contacto/actions/workflows/Acto%20pide%20contacto/badge.svg)
 
 This repository contains the backend microservice responsible for handling, validating, and processing contact form submissions from the company's main website and landing pages.
 
