@@ -1,4 +1,5 @@
 const express = require('express');
+const contactService = require('./contactService');
 const app = express();
 const port = process.env.PORT || 3000;
 
@@ -9,13 +10,12 @@ app.get('/', (req, res) => {
 });
 
 app.post('/contact', (req, res) => {
-  const { name, email, message } = req.body;
-  if (!name || !email || !message) {
-    return res.status(400).json({ error: 'Missing fields' });
+  try {
+    const result = contactService.processContact(req.body);
+    res.status(200).json({ success: true, message: 'Contact received', id: result.id });
+  } catch (error) {
+    res.status(400).json({ error: error.message });
   }
-  // Logic will be moved to service later
-  console.log(`Received contact from ${name}`);
-  res.status(200).json({ success: true, message: 'Contact received' });
 });
 
 if (require.main === module) {
